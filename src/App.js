@@ -1,6 +1,7 @@
 import "./App.css";
 import GoogleLogin from "react-google-login";
 import { useState } from "react";
+import PostGuy from "./component/PostGuy";
 
 function App() {
   const [loginData, setLoginData] = useState(
@@ -40,6 +41,7 @@ function App() {
         <div>
           {loginData ? (
             <div>
+              <PostGuy />
               <h3>You logged in as {loginData.email}</h3>
               <button onClick={handleLogout}>Logout</button>
             </div>
