@@ -36,7 +36,6 @@ function App() {
 
   return (
     <>
-      <PostGuy />
       <div className="App">
         <header className="App-header">
           <h1>React Google Login App</h1>

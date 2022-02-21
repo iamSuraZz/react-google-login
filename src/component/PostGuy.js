@@ -1,10 +1,13 @@
 import React from "react";
+import Logic from "./logic";
 import Navbar from "./Navbar";
 
-const PostGuy = () => {
+function PostGuy() {
   return (
     <div>
       <Navbar />
+      <Logic />
+
       <div className="container">
         <h1 className="my-3">Welcome to PostMann</h1>
       </div>
@@ -76,33 +79,35 @@ const PostGuy = () => {
         </div>
         {/* Parameters box */}
         <br />
-        <form className="row g-3">
-          <label htmlFor="url" className="form-label">
-            Parameter 1:
-          </label>
-          <div className="col-md-4" style={{ marginTop: "5px" }}>
-            <input
-              type="text"
-              className="form-control"
-              id="parameterKey1"
-              placeholder="Enter parameter 1 key"
-            />
-          </div>
-          <div className="col-md-4" style={{ marginTop: "5px" }}>
-            <input
-              type="text"
-              className="form-control"
-              id="parameterValue2"
-              placeholder="Enter parameter 1 value"
-            />
-          </div>
-          <button
-            style={{ marginTop: "5px" }}
-            className="col-md-1 btn btn-primary"
-          >
-            +
-          </button>
-        </form>
+        <div id="parametersBox">
+          <form className="row g-3">
+            <label htmlFor="url" className="form-label">
+              Parameter 1:
+            </label>
+            <div className="col-md-4" style={{ marginTop: "5px" }}>
+              <input
+                type="text"
+                className="form-control"
+                id="parameterKey1"
+                placeholder="Enter parameter 1 key"
+              />
+            </div>
+            <div className="col-md-4" style={{ marginTop: "5px" }}>
+              <input
+                type="text"
+                className="form-control"
+                id="parameterValue2"
+                placeholder="Enter parameter 1 value"
+              />
+            </div>
+            <button
+              style={{ marginTop: "5px" }}
+              className="col-md-1 btn btn-primary"
+            >
+              +
+            </button>
+          </form>
+        </div>
         {/* JSON Request Box */}
         <br />
         <label htmlFor="jsonBox">Enter Request JSON:</label>
@@ -131,6 +136,6 @@ const PostGuy = () => {
       </div>
     </div>
   );
-};
+}
 
 export default PostGuy;
